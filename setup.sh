@@ -53,13 +53,15 @@ else
   echo "  Already installed."
 fi
 
+defaults write com.knollsoft.Rectangle maximize \
+  -dict keyCode -int 126 modifierFlags -int 1048840
 defaults write com.knollsoft.Rectangle nextDisplay \
   -dict keyCode -int 124 modifierFlags -int 1179914
 defaults write com.knollsoft.Rectangle previousDisplay \
   -dict keyCode -int 123 modifierFlags -int 1179914
 
 open -a "Rectangle" 2>/dev/null || true
-echo "  Shortcuts configured: Shift+Cmd+Arrow for display move."
+echo "  Shortcuts configured: Cmd+Up=maximize, Shift+Cmd+Arrow=display move."
 
 # -------------------------------------------------------
 # 3. macOS: F-keys as standard function keys
